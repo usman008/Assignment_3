@@ -1,0 +1,342 @@
+
+//Question 1:
+//Write a program that print a text of 4 lines consisting of String , int and double. 
+
+  void main(){
+  String firstName = 'Andrea';
+  String lastName = 'Bizzotto';
+  int age = 36;
+  double height = 1.84;
+
+  print(firstName);
+  print(lastName);
+  print(age.toString());
+  print(height);
+
+  print('My name is '+ firstName + ' ' + lastName);
+  print('My name is $firstName $lastName ');
+  print("My name is $firstName, I'm $age years old, I'm $height meter tall");
+
+  print("Next year i'll be ${age+1} years old");
+  print("Next year i'll be" + (age+1).toString() + " " + "years old");
+}
+
+
+//Question 2:
+//Write a program that inputs radius of sphere from user.It calculates its volume and surface area using the formula Area = 4πR^2  and circumfrance = 4/3πR^3  wheras π = 3.14'.
+
+
+  void main(){
+  int radius = 10;
+  double area = 4*3.14*radius*radius;
+  double volume = (4/3)*3.14*radius*radius*radius;
+  
+  print('area ${area.toString()}');
+  print('volume: ${volume.toStringAsFixed(2)}');
+  }
+
+
+
+//Question 3:
+//Write a program to find out the area of triangle .
+
+
+ import 'dart:io';
+ import 'dart:math';
+
+ void main() {
+  print('Enter Side A:');
+  double sideA = double.parse(stdin.readLineSync()!);
+  print(sideA);
+
+  print('Enter Side B:');
+  double sideB = double.parse(stdin.readLineSync()!);
+  print(sideB);
+
+  print('Enter Side C:');
+  double sideC = double.parse(stdin.readLineSync()!);
+  print(sideC);
+
+  print('S:');
+  double s = (sideA + sideB + sideC) / 2;
+  print(s);
+
+  print('Area =');
+  double area = sqrt((s * (s - sideA) * (s - sideB) * (s - sideC)));
+  print(area);
+}
+
+//Question 4
+//Write a program that input input miles from user and convert miles into kilometers . One mile is equal to 1.609 kilometer.
+
+import 'dart:io';
+
+void main() {
+  print('Miles:');
+  double miles = double.parse(stdin.readLineSync()!);
+  print(miles);
+  
+  double kiloMeter = 1.609*miles;
+  print('Kilometer = ${kiloMeter.toStringAsFixed(2)}');
+
+}
+  
+
+//Question 5
+//Write a program that inputs 4 numbers and calculate  the sum, average and product of all numbers
+
+void main() {
+  final rollNo = 2;
+  final age = 22;
+  final regNo = 11;
+  final phoneNo = 123;
+
+  final sum = rollNo + age + regNo + phoneNo;
+  print('sum ${sum}');
+  //sum 158
+
+  final average = (rollNo + age + regNo + phoneNo) / 4;
+  print('Average  ${average}');
+  //Average  39.5
+
+  final product = rollNo * age * regNo * phoneNo;
+  print('Product  ${product}');
+  //Product  59532
+}
+
+
+//Question 6
+//Write a program that inputs age in years and display age in days and months.
+
+void main() {
+  final age = 22;
+  final Days = age * 365;
+  final months = age * 12;
+
+  print('Days : ${Days}');
+  //8030
+  print('Months : ${months}');
+  //264
+}
+
+
+//Question 7
+//Write a program that input a number from user and display its square and cube.
+
+void main() {
+  final age = 22;
+  final ageSquare = age*age;
+  final ageCube = age*age*age;
+
+  print('Square = ${ageSquare}');
+  //484
+  print('Cube = ${ageCube}');
+  //10648
+
+}
+
+//Question 8
+//Write a program that inputs total pages of a book, number of pages a person reads in one day and number of days a person has read the book. It displays number of pages that have been read and number of pages remaining.
+
+void main() {
+  final totalPages = 100;
+  final pagesRead = 5;
+  final bookDays = 4;
+
+  final totalPagesRead = pagesRead * bookDays;
+
+  final remaningPages = totalPages - totalPagesRead;
+  print('Total pages Read : ${totalPagesRead}');
+  //20
+
+  print('Remaning Pages  : ${remaningPages}');
+  //80
+}
+
+
+//Question 9
+//A car can travel 5.3 miles in 1 liter. Write a program that inputs petrol in liters and displays how much distance the car can cover using the available petrol.
+
+import 'dart:io';
+
+void main() {
+  print('Enter Patrol in liter:');
+  double petrol = double.parse(stdin.readLineSync()!);
+  double distanceCover = petrol*5.3;
+  print('Distance cover using the available petrol : ${distanceCover}\ miles');
+  //Distance cover using the available petrol : 26.5 miles
+}
+
+
+
+//Question 10
+//Write a program that inputs total number of student in a class and fee per student. It displays total fee collected from the class.
+
+import 'dart:io';
+
+void main() {
+  print('Enter total students :');
+  int students = int.parse(stdin.readLineSync()!);
+  print('Enter fee per student:');
+  int fee = int.parse(stdin.readLineSync()!);
+
+  int total = students*fee;
+  print('Total fee: ${total}');
+
+}
+
+
+
+//Question 11
+//Write a program that inputs temperature from the user in Farenheit and converts it into Celsius degree using formula C = 5/9(F-32).
+
+
+void main() {
+  double tempFarenheit = 86;
+  double farenheitCelsius = (tempFarenheit-32)/1.8;
+  print('Celsius : ${farenheitCelsius}');
+  //Celsius : 30.0
+}
+
+
+//Question 12
+//Write a program to show following output :
+    1    2    3    4    5
+    6    7    8    9    10
+
+
+void main() {
+  print('1 2 3 4 5 \n6 7 8 9 10');
+  //1 2 3 4 5
+ // 6 7 8 9 10
+}
+
+
+//Question 13
+//Write a program to calculate the volume (V) of a cube by taking meaures from the user. (Formula: V = length * width * height)
+
+
+import 'dart:io';
+
+void main() {
+  print('Enter Length:');
+  double length = double.parse(stdin.readLineSync()!);
+  print('Enter Width:');
+  double width = double.parse(stdin.readLineSync()!);
+  print('Enter Height:');
+  double height = double.parse(stdin.readLineSync()!);
+
+  double volume = length*width*height;
+  print('Volume of a cube is: ${volume}');
+
+}
+
+
+
+//Question 14
+//write a program that inputs x and y coordinates from two points and calculate distance between between two points .
+
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  print('Enter the value of X1:');
+  double x1 = double.parse(stdin.readLineSync()!);
+  //22
+
+  print('Enter the value of Y1:');
+  double y1 = double.parse(stdin.readLineSync()!);
+  //33
+
+  print('Enter the value of X2:');
+  double x2 = double.parse(stdin.readLineSync()!);
+  //44.5
+
+  print('Enter the value of Y2:');
+  double y2 = double.parse(stdin.readLineSync()!);
+  //77
+
+  double distance = sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+  print('Distance between two points is: ${distance.toStringAsFixed(3)}');
+  //Distance between two points is: 49.419
+
+}
+
+
+
+//Question 15
+//Write a program to swap the values of three variables with using fourth variable.
+
+void main() {
+  int variable1 = 3;
+  int variable2 = 4;
+  int variable3 = 5;
+
+  print('Without swap : ${variable1} ${variable2} ${variable3}');
+  //Without swap : 3 4 5
+
+  variable1=variable1+variable2+variable3;
+  variable2=variable1-(variable2+variable3);
+  variable3=variable1-(variable2+variable3);
+  variable1=variable1-(variable2+variable3);
+
+  print('Swap :${variable1} ${variable2} ${variable3}');
+
+
+}
+
+
+//Question 16
+//Write a program that calculates the arc of length of a convex lens by taking radius of arc and angle made by arc. (Formula: length = radius * angle)
+
+
+import 'dart:io';
+
+void main() {
+  print('Enter Radius:');
+  double radius = double.parse(stdin.readLineSync()!);
+  //44.4
+
+  print('Enter Angle:');
+  double angle = double.parse(stdin.readLineSync()!);
+  //30
+
+  double length = radius * angle;
+  print('Length = ${length}');
+  //Length = 1332.0
+}
+
+
+
+//Question 17
+//Write a program that inputs pounds from the user and converts it into kilograms.
+
+
+import 'dart:io';
+
+void main() {
+  print('Enter Pounds:');
+  double pound = double.parse(stdin.readLineSync()!); //5
+  
+  double kilogram = pound*2.205;
+  print('Kilogram = ${kilogram}');
+  //Kilogram = 11.025
+}
+
+
+//Question 18
+//Write a program that reads a positive number and then computes the logarithm of that value to the base 2.
+
+import 'dart:io';
+import 'dart:math';
+void main() {
+  print('Enter Positive number:');
+  double num = double.parse(stdin.readLineSync()!);  //53
+
+  num = log(num)/log(2);
+  print('logarithm : ${num.toStringAsFixed(4)}');
+  //logarithm : 5.7279
+}
+
+
+
